@@ -37,7 +37,6 @@
     .brand-dot{width:10px;height:10px;border-radius:50%;background:linear-gradient(90deg,var(--accent),var(--accent2));box-shadow:0 0 0 4px var(--ring)}
     .links{display:flex;gap:18px;align-items:center}
     .links a{color:#000;opacity:.92;font-weight:500}
-    .theme{border:1px solid var(--border);background:transparent;color:var(--muted);padding:6px 10px;border-radius:10px;cursor:pointer}
     .burger{display:none}
     @media (max-width:760px){.links{display:none}.burger{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);background:transparent;color:var(--muted);padding:6px 10px;border-radius:10px;}}
 
@@ -45,11 +44,38 @@
     .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--border)}
     .hero-bg{position:absolute;inset:0;background:radial-gradient(1200px 600px at 20% -10%,rgba(110,231,255,.25),transparent 60%),radial-gradient(900px 500px at 85% 10%,rgba(167,139,250,.22),transparent 55%),linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,0));pointer-events:none}
     .hero-media{position:relative}
-    .hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.42),rgba(0,0,0,.42));pointer-events:none}
-    .hero-media img{width:100%;height:54vh;object-fit:cover;filter:saturate(105%) contrast(98%)}
-    .hero-content{position:absolute;inset:0;display:grid;place-items:end start}
-    .hero-card{margin:24px;background:rgba(8,12,20,.92);backdrop-filter:blur(6px);border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);max-width:min(820px,92%);padding:24px}
-    .hero-card h1{color:#ffffff;text-shadow:0 2px 6px rgba(0,0,0,.55)}
+    /* .hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.42),rgba(0,0,0,.42));pointer-events:none} */
+    .hero-media::after{content:"";position:absolute;inset:0;pointer-events:none;}
+    .hero-media img{
+      width:100%;
+      height:54vh;
+      object-fit:cover;
+      filter: brightness(0.6) saturate(105%) contrast(98%);
+      opacity:0.94;
+    }
+    .hero-content{
+      position:absolute;
+      inset:0;
+      display:grid;
+      place-items:center;
+      transform: translateY(-6vh);
+      /* The card sits over the image, no background overlay needed */
+    }
+    .hero-card{
+      margin:24px;
+      background: transparent;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      backdrop-filter: none;
+      max-width: min(1020px,92%);
+      padding:24px;
+    }
+    .hero-card h1,
+    .hero-card .lead {
+      text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+    }
+    .hero-card h1{color:#ffffff;}
     .hero-card .lead{color:#eaf2ff;opacity:.98}
     .eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#d8e4f7}
     h1{font-size:clamp(28px,4.5vw,50px);line-height:1.15;margin:.2em 0}
@@ -95,6 +121,10 @@
     .foot{display:grid;gap:16px;grid-template-columns:1fr auto;align-items:center}
     @media (max-width:720px){.foot{grid-template-columns:1fr}}
 
+    @media (max-width:720px){
+      .hero-content{ transform: translateY(-3vh); }
+    }
+
     /* Motion reduction */
     @media (prefers-reduced-motion: reduce){
       .card,.hero-card{transition:none}
@@ -115,7 +145,6 @@
         <a href="#writing">Writing</a>
         <a href="#talks">Talks</a>
         <a href="#bio">Bio/CV</a>
-        <button class="theme" id="themeToggle" aria-label="Toggle theme">Theme</button>
       </nav>
       <button class="burger" id="menuBtn" aria-expanded="false" aria-controls="m">Menu</button>
     </div>
@@ -128,13 +157,8 @@
       <img src="assets/banner.jpg" alt="Abstract banner evoking XR and AI" />
       <div class="hero-content">
         <div class="hero-card">
-          <div class="eyebrow">Media Theory • XR Experience Design • AI Affordances</div>
-          <h1>Exploring how extended reality and AI refashion expression, narrative, and culture.</h1>
-          <p class="lead">Wesley Chair of New Media at Georgia Tech; co-director of the Augmented Environments Lab. Researcher, writer, and designer of prototypes that test emerging expressive capabilities.</p>
-          <div class="cta">
-            <a href="#projects" class="btn primary">See Projects</a>
-            <a href="#writing" class="btn">Read Publications</a>
-          </div>
+          <h1>Exploring how extended reality & generative AI can refashion expression, narrative, and culture.</h1>
+          <p class="lead">Professor Emeritus and former Wesley Chair of New Media at Georgia Tech</p>
         </div>
       </div>
     </div>
@@ -146,15 +170,14 @@
       <div class="container">
         <div class="section-head">
           <h2 id="focus-h">Research Focus</h2>
-          <div class="kicker">Design experiments + critical theory</div>
         </div>
         <div class="grid cols-3">
           <article class="card">
-            <img src="assets/talks/mixed.png" alt="Mixed reality narratives thumbnail" />
+            <img src="assets/talks/istanbul.png" alt="Lecture stage" />
             <div class="card-body">
-              <h3>XR Experience Design</h3>
-              <p>Prototyping AR/VR and WebXR for cultural heritage, learning, and narrative. With Blair MacIntyre and the AEL.</p>
-              <div class="meta">Embodiment • Spatial narrative • Interaction</div>
+              <h3>Media Theory & History</h3>
+              <p>From hypertext to remediation to the digital plenitude—continuities across print, film, television, and code.</p>
+              <div class="meta">Books • Essays • Talks</div>
             </div>
           </article>
           <article class="card">
@@ -166,11 +189,11 @@
             </div>
           </article>
           <article class="card">
-            <img src="assets/talks/istanbul.png" alt="Lecture stage" />
+            <img src="assets/talks/mixed.png" alt="Mixed reality narratives thumbnail" />
             <div class="card-body">
-              <h3>Media Theory & History</h3>
-              <p>From hypertext to remediation to the digital plenitude—continuities across print, film, television, and code.</p>
-              <div class="meta">Books • Essays • Talks</div>
+              <h3>XR Experience Design</h3>
+              <p>Prototyping AR/VR and WebXR for cultural heritage, learning, and narrative. With Blair MacIntyre and the AEL.</p>
+              <div class="meta">Embodiment • Spatial narrative • Interaction</div>
             </div>
           </article>
         </div>
@@ -181,8 +204,7 @@
     <section id="projects" aria-labelledby="projects-h">
       <div class="container">
         <div class="section-head">
-          <h2 id="projects-h">Spotlight Projects</h2>
-          <div class="kicker">Prototypes, labs, collaborations</div>
+          <h2 id="projects-h">Projects</h2>
         </div>
         <div class="filters" role="toolbar" aria-label="Project filters">
           <button class="chip" data-filter="all" aria-pressed="true">All</button>
@@ -226,7 +248,6 @@
       <div class="container">
         <div class="section-head">
           <h2 id="writing-h">Selected Writing & Books</h2>
-          <div class="kicker">Books & long-form essays</div>
         </div>
         <div class="grid cols-3">
           <article class="card">
@@ -263,7 +284,6 @@
       <div class="container">
         <div class="section-head">
           <h2 id="talks-h">Talks & Media</h2>
-          <div class="kicker">Recent recordings</div>
         </div>
         <div class="grid cols-3">
           <article class="card">
@@ -296,7 +316,6 @@
       <div class="container">
         <div class="section-head">
           <h2 id="bio-h">Bio & CV</h2>
-          <div class="kicker">Download & contact</div>
         </div>
         <div class="grid cols-2">
           <div>
