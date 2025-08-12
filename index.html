@@ -90,6 +90,12 @@
     .section-head h2{margin:0;font-size:26px}
     .kicker{color:var(--muted);font-size:14px}
 
+    /* XR MODAL & DETAILS */
+    details.more{margin-top:8px}
+    details.more summary{cursor:pointer}
+    dialog{border:1px solid var(--border);border-radius:12px;padding:20px;background:var(--surface);color:var(--text);max-width:720px;box-shadow:var(--shadow)}
+    dialog::backdrop{background:rgba(0,0,0,.5)}
+
     /* GRIDS */
     .grid{display:grid;gap:18px}
     .grid.cols-3{grid-template-columns:repeat(3,1fr)}
@@ -140,7 +146,7 @@
     <div class="container nav-inner">
       <div class="brand"><span class="brand-dot" aria-hidden="true"></span> Jay David Bolter</div>
       <nav class="links" aria-label="Primary">
-        <a href="#focus">Focus</a>
+        <a href="#focus">Areas</a>
         <a href="#projects">Projects</a>
         <a href="#writing">Writing</a>
         <a href="#talks">Talks</a>
@@ -169,30 +175,39 @@
     <section id="focus" aria-labelledby="focus-h">
       <div class="container">
         <div class="section-head">
-          <h2 id="focus-h">Research Focus</h2>
+          <h2 id="focus-h">Research Areas</h2>
         </div>
         <div class="grid cols-3">
           <article class="card">
-            <img src="assets/talks/istanbul.png" alt="Lecture stage" />
             <div class="card-body">
               <h3>Media Theory & History</h3>
               <p>Remediation and the digital plenitude: continuities and disruptions across print, film, television, and born-digital media.</p>
+              <details class="more">
+                <summary>More</summary>
+                <p>I study how new (digital) media affect and are affected by earlier media and media forms, including film, television, and print. That work began with Writing Space: The Computer, Hypertext and the Remediation of Print (first edition 1991; second edition 2001 by Lawrence Erlbaum). Writing Space examined the computer’s place in the history of symbolic (textual) media. I argue that digital hypertext is the remediation of the printed book. Remediation: Understanding New Media (coauthored by Richard Grusin, MIT Press, 1999) focuses on the relationship between visual digital expressions (such as computer games and the World Wide Web) and earlier media forms (such as film and television). We argue that digital forms both borrow from and seek to surpass earlier forms, and we give this process the name “remediation.” Windows and Mirrors (coauthored with Diane Gromala, MIT Press, 2003) examines digital art as a radical form of interface design. My most recent single-authored book The Digital Plenitude was published by MIT Press in 2019. It focuses on two developments in the second half of the twentieth-century century that have helped to define our media culture in the twenty-first: the decline of cultural hierarchy and the rise of digital media. There is a digital companion at www.digitalplenitude.net.</p>
+              </details>
               <div class="meta">Books • Essays • Talks</div>
             </div>
           </article>
           <article class="card">
-            <img src="assets/talks/books.png" alt="AI aesthetics talk thumbnail" />
             <div class="card-body">
               <h3>AI aesthetics and cultural practices</h3>
               <p>How generative tools may redefine concepts of creativity, authorship, and the grammars of traditional cinema, CVR, & VR</p>
+              <details class="more">
+                <summary>More</summary>
+                <p>Working with current and recent Ph.D. students, I am exploring the aesthetics of generative AI, especially for the creation of traditional screen-based cinema, CVR, and 'true' 3D VR.</p>
+              </details>
               <div class="meta">GenAI • Workflow • Practice-led</div>
             </div>
           </article>
           <article class="card">
-            <img src="assets/talks/mixed.png" alt="Mixed reality narratives thumbnail" />
             <div class="card-body">
               <h3>XR Experience Design</h3>
               <p>Prototyping AR/VR and WebXR for cultural heritage, learning, and narrative. With Blair MacIntyre and the AEL.</p>
+              <details class="more">
+                <summary>More</summary>
+                <p>For more than two decades, I worked with Prof. Blair MacIntyre who heads the AEL (Augmented Environments Lab) to explore new forms of informal education, personal expression, and entertainment. We designed and built a number of prototypes and experimental systems for Augmented Reality. More recently we created experiences in VR, and especially WebVR, a protocol that allows users to access VR through a web browser on a smartphone, computer, or through a VR headset. We created a digital companion to our book Reality Media (MIT Press, 2021) using this technology. Reality Media places virtual and augmented reality in the tradition of other media, especially film and television, that fashion visual and auditory realities for their viewers. The digital companion illustrates this tradition both as a website and an immersive experience.</p>
+              </details>
               <div class="meta">Embodiment • Spatial narrative • Interaction</div>
             </div>
           </article>
@@ -296,7 +311,7 @@
           <article class="card">
             <img src="assets/talks/designing.png" alt="Designing with AR thumbnail" />
             <div class="card-body">
-              <h3>Designing & Prototyping with Mobile AR</h3>
+              <h3>Designing with Mobile AR</h3>
               <p><a href="https://youtu.be/P0-_Sc5UKIQ?feature=shared" target="_blank" rel="noopener">Watch on YouTube</a></p>
             </div>
           </article>
@@ -305,6 +320,29 @@
             <div class="card-body">
               <h3>Videogames & the Two Avant-Gardes</h3>
               <p><a href="https://youtu.be/50H6oA5K97w?feature=shared" target="_blank" rel="noopener">Watch on YouTube</a></p>
+            </div>
+          </article>
+        </div>
+        <div class="grid cols-3">
+          <article class="card">
+            <img src="assets/talks/games.png" alt="Mixed Reality Narratives thumbnail" />
+            <div class="card-body">
+              <h3>Mixed Reality Narratives</h3>
+              <p><a href="https://www.youtube.com/watch?v=VfJPQSbQXXM" target="_blank" rel="noopener">Watch on YouTube</a></p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="assets/talks/books.png" alt="The Digital Plenitude & the End of Art thumbnail" />
+            <div class="card-body">
+              <h3>The Digital Plenitude & the End of Art</h3>
+              <p><a href="https://www.youtube.com/watch?v=SkojYeok6LY" target="_blank" rel="noopener">Watch on YouTube</a></p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="assets/talks/books.png" alt="The Future of Books thumbnail" />
+            <div class="card-body">
+              <h3>The Future of Books</h3>
+              <p><a href="https://www.youtube.com/watch?v=1F2mrr7FYw8" target="_blank" rel="noopener">Watch on YouTube</a></p>
             </div>
           </article>
         </div>
@@ -379,6 +417,7 @@
 
     // Year
     document.getElementById('year').textContent = new Date().getFullYear();
+
 
     // Simple reveal on scroll
     const reveal = new IntersectionObserver((entries)=>{
