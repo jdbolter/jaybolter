@@ -21,7 +21,7 @@
       :root{ --bg:#f6f8fb; --text:#0b1120; --muted:#475569; --surface:#ffffff; --panel:#ffffff; --border:#e5e7eb; --accent:#0284c7; --accent2:#7c3aed; --ring: rgba(2,132,199,.2); --shadow:0 8px 24px rgba(2,6,23,.08);} }
     *,*::before,*::after{box-sizing:border-box}
     html,body{height:100%}
-    body{margin:0;background:var(--bg);color:var(--text);font-family:'Inter',system-ui,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}
+    body{margin:0;padding-top:64px;background:var(--bg);color:var(--text);font-family:'Inter',system-ui,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}
     a{color:var(--accent);text-decoration:none}
     a:hover{text-decoration:underline}
     .container{max-width:1180px;margin:0 auto;padding:0 20px}
@@ -31,7 +31,7 @@
     .skip:focus{left:16px;top:16px;background:var(--panel);border:2px solid var(--accent);padding:8px 12px;border-radius:8px;z-index:10000}
 
     /* NAV */
-    .nav{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,0.85);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid rgba(0,0,0,0.1)}
+    .nav{position:fixed;top:0;left:0;right:0;z-index:1100;background:rgba(255,255,255,0.78);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid rgba(0,0,0,0.1)}
     .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
     .brand{display:flex;align-items:center;gap:10px;font-weight:700;color:#000;}
     .brand-dot{width:10px;height:10px;border-radius:50%;background:linear-gradient(90deg,var(--accent),var(--accent2));box-shadow:0 0 0 4px var(--ring)}
@@ -78,14 +78,14 @@
     .hero-card h1{color:#ffffff;}
     .hero-card .lead{color:#eaf2ff;opacity:.98}
     .eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#d8e4f7}
-    h1{font-size:clamp(28px,4.5vw,50px);line-height:1.15;margin:.2em 0}
+    h1{font-size:clamp(26px,4vw,46px);line-height:1.15;margin:.2em 0}
     .lead{font-size:clamp(16px,2.2vw,19px);color:var(--muted)}
     .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px}
     .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;border:1px solid var(--border);background:var(--surface);color:var(--text);font-weight:600}
     .btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#081018;border:none}
 
     /* SECTIONS */
-    main section{padding:64px 0}
+    main section{padding:56px 0}
     .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:10px;margin-bottom:20px}
     .section-head h2{margin:0;font-size:26px}
     .kicker{color:var(--muted);font-size:14px}
@@ -144,24 +144,6 @@
     /* Prevent headings from hiding under sticky nav */
     section { scroll-margin-top: 76px; }
 
-    /* Floating Back-to-top button */
-    .to-top{
-      position: fixed;
-      right: 20px;
-      bottom: 24px;
-      display: none;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 14px;
-      border-radius: 999px;
-      box-shadow: var(--shadow);
-      z-index: 1100;
-    }
-    .to-top.show{ display: inline-flex; }
-    .to-top .chev{font-weight:700; line-height:1}
-    @media (max-width:720px){
-      .to-top{ right: 14px; bottom: 18px; }
-    }
   </style>
 </head>
 <body>
@@ -189,7 +171,7 @@
       <img src="assets/banner.jpg" alt="Abstract banner evoking XR and AI" />
       <div class="hero-content">
         <div class="hero-card">
-          <h1>Exploring VR, AR, and generative AI for art, entertainment & cultural expression</h1>
+          <h1>Exploring VR, AR, and generative AI for<br> art, entertainment & cultural expression</h1>
           <p class="lead">Jay David Bolter, Professor Emeritus and former Wesley Chair of New Media at Georgia Tech</p>
         </div>
       </div>
@@ -223,7 +205,7 @@
                 <summary>More</summary>
                 <p>Working with current and recent Ph.D. students, I am exploring the aesthetics of generative AI, especially for the creation of traditional screen-based cinema, CVR, and 'true' 3D VR.</p>
               </details>
-              <div class="meta">GenAI • Workflow • Practice-led</div>
+              <div class="meta">GenAI • Aesthetics</div>
             </div>
           </article>
           <article class="card">
@@ -234,7 +216,7 @@
                 <summary>More</summary>
                 <p>For more than two decades, I worked with Prof. Blair MacIntyre who heads the AEL (Augmented Environments Lab) to explore new forms of informal education, personal expression, and entertainment. We designed and built a number of prototypes and experimental systems for Augmented Reality. More recently we created experiences in VR, and especially WebVR, a protocol that allows users to access VR through a web browser on a smartphone, computer, or through a VR headset. We created a digital companion to our book Reality Media (MIT Press, 2021) using this technology. Reality Media places virtual and augmented reality in the tradition of other media, especially film and television, that fashion visual and auditory realities for their viewers. The digital companion illustrates this tradition both as a website and an immersive experience.</p>
               </details>
-              <div class="meta">Embodiment • Spatial narrative • Interaction</div>
+              <div class="meta">Embodiment • Spatial narrative</div>
             </div>
           </article>
         </div>
@@ -338,37 +320,22 @@
         <div class="section-head">
           <h2 id="projects-h">Projects</h2>
         </div>
+        <!--
         <div class="filters" role="toolbar" aria-label="Project filters">
           <button class="chip" data-filter="all" aria-pressed="true">All</button>
           <button class="chip" data-filter="xr">XR</button>
           <button class="chip" data-filter="ai">AI</button>
           <button class="chip" data-filter="theory">Theory</button>
         </div>
+        -->
         <div class="grid cols-3" id="projectGrid">
           <article class="card" data-tags="xr theory">
-            <img src="assets/atlantic.png" alt="The Atlantic thumbnail" />
+            <img src="assets/projects/realitymedia.png" alt="RealityMedia image" />
             <div class="card-body">
               <h3>Reality Media — Digital Companion</h3>
-              <p>A WebXR site situating VR/AR within longer media histories.</p>
+              <p>A WebXR experience situating VR/AR within longer media histories.</p>
               <div><span class="tag">WebXR</span><span class="tag">Cultural Heritage</span><span class="tag">Pedagogy</span></div>
               <p><a href="https://realitymedia.digital/" target="_blank" rel="noopener">Visit site</a></p>
-            </div>
-          </article>
-          <article class="card" data-tags="xr">
-            <img src="assets/talks/mixed.png" alt="Mixed Reality Narratives" />
-            <div class="card-body">
-              <h3>Mixed Reality Narratives</h3>
-              <p>Designing narrative structures for spatial computing and embodied interaction.</p>
-              <div><span class="tag">AR</span><span class="tag">Narrative</span><span class="tag">Embodiment</span></div>
-              <p><a href="https://youtu.be/VfJPQSbQXXM?feature=shared" target="_blank" rel="noopener">Watch talk</a></p>
-            </div>
-          </article>
-          <article class="card" data-tags="ai xr">
-            <img src="assets/yesterday.png" alt="Salon thumbnail" />
-            <div class="card-body">
-              <h3>AI for Cinematic Prototyping</h3>
-              <p>Exploring generative workflows for screen-based cinema and 360° video (CVR).</p>
-              <div><span class="tag">GenAI</span><span class="tag">CVR</span><span class="tag">Workflow</span></div>
             </div>
           </article>
         </div>
@@ -405,7 +372,6 @@
     </div>
   </footer>
 
-  <a href="#home" id="toTop" class="btn to-top" aria-label="Back to top"><span class="chev">↑</span> Top</a>
 
   <script>
     // Theme preference
@@ -427,7 +393,8 @@
       menuBtn.setAttribute('aria-expanded', String(!isOpen));
     });
 
-    // Project filters
+    /*
+    // Project filters (temporarily disabled)
     const chips = document.querySelectorAll('.chip');
     const cards = document.querySelectorAll('#projectGrid .card');
     chips.forEach(ch => ch.addEventListener('click', ()=>{
@@ -442,6 +409,7 @@
         }
       });
     }));
+    */
 
     // Year
     document.getElementById('year').textContent = new Date().getFullYear();
@@ -461,26 +429,6 @@
       reveal.observe(el);
     });
 
-    // Back-to-top: show on scroll and smooth-scroll fallback
-    const toTopBtn = document.getElementById('toTop');
-    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    const toggleToTop = () => {
-      const y = window.scrollY || document.documentElement.scrollTop;
-      toTopBtn?.classList.toggle('show', y > 400);
-    };
-    window.addEventListener('scroll', toggleToTop, { passive: true });
-    window.addEventListener('load', toggleToTop);
-
-    toTopBtn?.addEventListener('click', (e)=>{
-      // native anchor handles most cases; provide JS fallback when needed
-      if (prefersReduced) return; // no animation if user prefers reduced motion
-      // If the browser doesn't support CSS smooth scroll or to ensure consistency:
-      if (!('scrollBehavior' in document.documentElement.style)) {
-        e.preventDefault();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
-    });
   </script>
 </body>
 </html>
