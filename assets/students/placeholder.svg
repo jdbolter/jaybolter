@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400" role="img" aria-labelledby="title desc">
+  <title id="title">Human silhouette</title>
+  <desc id="desc">A clean, centered human bust silhouette moved upward within a square frame.</desc>
+
+  <rect width="400" height="400" fill="#121a28"/>
+
+  <!-- Head -->
+  <ellipse
+    cx="200"
+    cy="101"
+    rx="56"
+    ry="61"
+    fill="#536176"
+    stroke="#aab6cc"
+    stroke-width="2.2"
+  />
+
+  <!-- Neck and torso -->
+  <path
+    d="
+      M 173 163
+      C 175 177, 172 184, 159 190
+      C 115 201, 82 226, 61 261
+      C 52 276, 48 292, 48 309
+      L 48 366
+      L 352 366
+      L 352 309
+      C 352 292, 348 276, 339 261
+      C 318 226, 285 201, 241 190
+      C 228 184, 225 177, 227 163
+      C 218 168, 209 171, 200 171
+      C 191 171, 182 168, 173 163
+      Z"
+    fill="#536176"
+    stroke="#aab6cc"
+    stroke-width="2.2"
+    stroke-linejoin="round"
+  />
+</svg>

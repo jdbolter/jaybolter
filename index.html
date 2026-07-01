@@ -25,6 +25,7 @@
         <a href="#writing">Writings</a>
         <a href="#talks">Talks</a>
         <a href="#projects">Projects</a>
+        <a href="#students">Students</a>
         <a href="#bio">Bio/CV</a>
       </nav>
       <button class="burger" id="menuBtn" aria-expanded="false" aria-controls="m">Menu</button>
@@ -38,7 +39,7 @@
       <img src="assets/banner.jpg" alt="Abstract banner evoking XR and AI" />
       <div class="hero-content">
         <div class="hero-card">
-          <h1>Exploring VR, AR, and generative AI for<br> art, entertainment & cultural expression</h1>
+          <h1>Exploring XR and generative AI for<br> art, entertainment & cultural expression</h1>
           <p class="lead">Jay David Bolter, Professor Emeritus and former Wesley Chair of New Media at Georgia Tech</p>
         </div>
       </div>
@@ -209,6 +210,22 @@
       </div>
     </section>
 
+    <!-- STUDENTS (collapsible) -->
+    <section id="students" aria-labelledby="students-h">
+      <div class="container">
+        <div class="section-head clickable" id="studentsToggle" role="button" tabindex="0" aria-expanded="false" aria-controls="studentsContent">
+          <div>
+            <h2 id="students-h">Ph.D. Students (Current and Graduated) <span class="toggle-icon" aria-hidden="true">+</span></h2>
+            <p class="section-subtitle"> I have had the pleasure of directing a remarkable group of students.</p>
+          </div>
+        </div>
+        <div id="studentsContent" class="collapsible-content" aria-hidden="true">
+          <div class="grid cols-3" id="studentsGrid">
+            <!-- Student cards will be dynamically loaded from students.json -->
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- BIO/CV -->
     <section id="bio" aria-labelledby="bio-h">
@@ -280,6 +297,52 @@
 
     // Year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Load students from JSON
+    fetch('assets/students/students.json')
+      .then(response => response.json())
+      .then(students => {
+        const grid = document.getElementById('studentsGrid');
+        students.forEach(student => {
+          const card = document.createElement('article');
+          card.className = 'card';
+          
+          const photoSrc = student.photo || 'placeholder.svg';
+          
+          card.innerHTML = `
+            <img src="assets/students/${photoSrc}" alt="${student.name}" onerror="this.src='assets/students/placeholder.svg'" />
+            <div class="card-body">
+              <h3>${student.name}</h3>
+              <p>${student.bio}</p>
+              ${student.website ? `<p><a href="${student.website}" target="_blank" rel="noopener">Website</a></p>` : ''}
+              <div class="meta">${student.year}</div>
+            </div>
+          `;
+          grid.appendChild(card);
+        });
+      })
+      .catch(err => console.error('Error loading students:', err));
+
+    // Students section toggle
+    const studentsToggle = document.getElementById('studentsToggle');
+    const studentsContent = document.getElementById('studentsContent');
+    const toggleIcon = studentsToggle?.querySelector('.toggle-icon');
+    
+    studentsToggle?.addEventListener('click', ()=>{
+      const isExpanded = studentsToggle.getAttribute('aria-expanded') === 'true';
+      studentsToggle.setAttribute('aria-expanded', String(!isExpanded));
+      studentsContent.setAttribute('aria-hidden', String(isExpanded));
+      studentsContent.classList.toggle('expanded');
+      toggleIcon.classList.toggle('open');
+    });
+    
+    // Allow keyboard activation (Enter/Space)
+    studentsToggle?.addEventListener('keydown', (e)=>{
+      if(e.key === 'Enter' || e.key === ' '){
+        e.preventDefault();
+        studentsToggle.click();
+      }
+    });
 
 
     // Simple reveal on scroll

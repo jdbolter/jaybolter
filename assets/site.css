@@ -98,6 +98,16 @@
 
     /* FILTER TABS */
     .filters{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 18px}
+
+    /* COLLAPSIBLE SECTION */
+    .clickable{cursor:pointer;user-select:none;transition:opacity .2s ease}
+    .clickable:hover{opacity:.85}
+    .clickable:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}
+    .section-subtitle{margin:0;color:var(--muted);font-size:14px;font-weight:400}
+    .toggle-icon{display:inline-block;margin-left:8px;font-size:24px;font-weight:300;transition:transform .3s ease}
+    .toggle-icon.open{transform:rotate(45deg)}
+    .collapsible-content{max-height:0;overflow:hidden;transition:max-height .4s ease, opacity .3s ease;opacity:0}
+    .collapsible-content.expanded{max-height:5000px;opacity:1;margin-top:20px}
     .chip{border:1px solid var(--border);background:transparent;color:var(--muted);padding:6px 10px;border-radius:999px;cursor:pointer}
     .chip[aria-pressed="true"]{background:var(--surface);color:var(--text);box-shadow:0 0 0 3px var(--ring)}
 
