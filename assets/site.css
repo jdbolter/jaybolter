@@ -91,6 +91,8 @@
     .card{background:var(--panel);border:1px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:var(--shadow);transition:transform .2s ease}
     .card:hover{transform:translateY(-3px)}
     .card img{width:100%;aspect-ratio:16/9;object-fit:cover}
+    #studentsGrid img[src$="Fisher.webp"]{object-position:center 20%}
+    #studentsGrid img[src$="Phelps.png"]{object-fit:contain;background:#0c0f14}
     .card-body{padding:14px}
     .card h3{margin:0 0 6px;font-size:18px}
     .meta{color:var(--muted);font-size:12px}
@@ -139,4 +141,3 @@
     }
     /* Prevent headings from hiding under sticky nav */
     section { scroll-margin-top: 76px; }
-
