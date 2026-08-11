@@ -2,99 +2,99 @@
   {
     "name": "Cecile Zhang",
     "photo": "placeholder.svg",
-    "bio": "Coming soon",
+    "bio": "",
     "website": "",
     "year": ""
   },
   {
     "name": "Colin Freeman",
     "photo": "placeholder.svg",
-    "bio": "Coming soon",
-    "website": "",
-    "year": ""
-  },
-  {
-    "name": "Jisu Park",
-    "photo": "placeholder.svg",
-    "bio": "Coming soon",
-    "website": "",
-    "year": "Ph.D. 2025"
-  },
-  {
-    "name": "Soy Jang",
-    "photo": "placeholder.svg",
-    "bio": "Coming soon",
+    "bio": "",
     "website": "",
     "year": ""
   },
   {
     "name": "Watson Hartsoe",
     "photo": "placeholder.svg",
-    "bio": "Coming soon",
+    "bio": "",
     "website": "",
     "year": ""
   },
   {
-    "name": "Yuchen Zao",
+    "name": "Soy Jang",
+    "photo": "placeholder.svg",
+    "bio": "",
+    "website": "",
+    "year": ""
+  },
+  {
+    "name": "Jisu Park",
+    "photo": "placeholder.svg",
+    "bio": "",
+    "website": "",
+    "year": "Ph.D. 2025"
+  },
+  {
+    "name": "Yuchen Zhao",
     "photo": "zhao.jpeg",
     "bio": "Yuchen Zhao is a researcher in digital media, XR, human-computer interaction, and human-centered AI. Her doctoral research, including the BioVR project, explored how physiological data can be incorporated into XR to create adaptive interaction mechanisms that respond to users’ physical and emotional states. Her broader interests include digital heritage, new media storytelling, and interactive experience design. She is currently a Postdoctoral Associate at the Yale School of Nursing, where her work focuses on AI-enabled digital health interventions.",
     "website": "https://zhaoyuchen.site",
-    "year": "2025"
+    "year": "Ph.D. 2025"
   },
   {
     "name": "Daniel Phelps",
-    "photo": "placeholder.svg",
-    "bio": "Coming soon",
-    "website": "",
-    "year": ""
-  },
-  {
-    "name": "Henry Blumenthal",
-    "photo": "placeholder.svg",
-    "bio": "Coming soon",
-    "website": "",
-    "year": ""
-  },
-  {
-    "name": "Jill Fantauzza",
-    "photo": "placeholder.svg",
-    "bio": "Coming soon",
-    "website": "",
-    "year": ""
+    "photo": "Phelps.png",
+    "bio": "Daniel Phelps is a media artist, designer, and educator whose work connects large-scale making, spatial storytelling, and advanced technology into a single practice. His research and creative work have been sponsored by NASA, the Oak Ridge National Labs, the Create-X program, the Wagner Foundation, and the PSC/CUNY Research Foundation. He holds a Ph.D. in Digital Media from Georgia Tech and has led academic programs spanning robotics, XR, and media production across more than 20 years of teaching. He currently serves as faculty for the School of Literature, Media, and Communication at the Georgia Institute of Technology.",
+    "website": "https://www.danielphelps.com",
+    "year": "Ph.D. 2025"
   },
   {
     "name": "Patrick Fiorilli",
     "photo": "placeholder.svg",
-    "bio": "Coming soon",
+    "bio": "",
     "website": "",
-    "year": ""
+    "year": "Ph.D. 2022"
   },
   {
-    "name": "Joshua Fisher",
+    "name": "Joshua A. Fisher",
+    "photo": "Fisher.webp",
+    "bio": "As an Associate Professor at Ball State University, Fisher’s work explores how emerging technologies shape the ways people create, interpret, and participate in the world around them. As a digital humanist and designer, he builds and studies interactive systems with a particular interest in human agency, community storytelling, learning, and how people negotiate meaning with increasingly intelligent and spatial technologies.",
+    "website": "https://www.jafisherportfolio.com",
+    "year": "Ph.D. 2019"
+  },
+  {
+    "name": "Henry Blumenthal",
     "photo": "placeholder.svg",
-    "bio": "Coming soon",
+    "bio": "",
     "website": "",
-    "year": ""
+    "year": "Ph.D. 2016"
+  },
+  {
+    "name": "Jill Fantauzza",
+    "photo": "placeholder.svg",
+    "bio": "",
+    "website": "",
+    "year": "Ph.D. 2013"
   },
   {
     "name": "Rebecca Rouse",
     "photo": "placeholder.svg",
-    "bio": "Coming soon",
+    "bio": "",
     "website": "",
-    "year": ""
+    "year": "Ph.D. 2013"
   },
   {
     "name": "Brian Schrank",
     "photo": "placeholder.svg",
-    "bio": "Coming soon",
+    "bio": "",
     "website": "",
-    "year": ""
+    "year": "Ph.D. 2010"
   },
   {
     "name": "Geoffrey Thomas",
-    "photo": "placeholder.svg",
-    "bio": "Coming soon",
-    "website": "",
-    "year": ""
+    "photo": "Thomas.jpg",
+    "bio": "I create interactive, multimedia experiences that entertain, inform, and engage. I've done this as a designer, artist, curator, teacher, and manager. My work moves across mediums, combining painting, drawing, photography, music, animation, filmmaking, electronics, digital media, and code.",
+    "website": "https://www.lefttomyowndevices.com",
+    "year": "Ph.D. 2010"
   }
 ]
