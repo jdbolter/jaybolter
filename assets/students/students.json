@@ -15,9 +15,9 @@
   },
   {
     "name": "Watson Hartsoe",
-    "photo": "placeholder.svg",
-    "bio": "",
-    "website": "https://watson-hartsoe.webflow.io/",
+    "photo": "Hartsoe.png",
+    "bio": "Watson Hartsoe is a research engineer and creative technologist who builds working tools for generative media, filmmaking, and worldbuilding. He is a PhD candidate in Digital Media at Georgia Tech, where he develops systems for a problem now shared across creative and technical fields: machines can produce more images, video, code, and possible worlds than people can meaningfully inspect, organize, or shape. His recent work turns that abundance into usable instruments, including browser-based filmmaking systems, networked 3D environments, and compilers that translate formal languages into interactive experiences.He holds an MS in Human-Computer Interaction from Georgia Tech and previously conducted Fulbright fieldwork in Honduras. His work has been recognized by the ITU AI for Good platform, Georgia Tech's AI Competition, CREATE-X, and the Neu Wave AI Film Festival.",
+    "website": "https://hartswf0.github.io/elsewhere/",
     "year": "Ph.D. in progress"
   },
   {
