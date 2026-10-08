@@ -303,7 +303,10 @@
       .then(response => response.json())
       .then(students => {
         const grid = document.getElementById('studentsGrid');
-        students.forEach(student => {
+        const fullCards = students.filter(student => student.display !== 'compact');
+        const compactStudents = students.filter(student => student.display === 'compact');
+
+        fullCards.forEach(student => {
           const card = document.createElement('article');
           card.className = 'card';
           
@@ -320,6 +323,28 @@
           `;
           grid.appendChild(card);
         });
+
+        if(compactStudents.length){
+          const compactList = document.createElement('ul');
+          compactList.className = 'student-compact-list';
+          compactList.setAttribute('aria-label', 'Additional graduates');
+
+          compactStudents.forEach(student => {
+            const item = document.createElement('li');
+            const name = document.createElement('span');
+            const year = document.createElement('span');
+
+            name.className = 'student-compact-name';
+            name.textContent = student.name;
+            year.className = 'meta';
+            year.textContent = student.year;
+
+            item.append(name, year);
+            compactList.appendChild(item);
+          });
+
+          grid.appendChild(compactList);
+        }
       })
       .catch(err => console.error('Error loading students:', err));
 

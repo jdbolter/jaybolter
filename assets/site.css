@@ -96,6 +96,10 @@
     #studentsGrid img[src$="Fiorilli.jpg"]{object-position:center top}
     #studentsGrid img[src$="Rouse.jpg"]{object-position:center 25%}
     #studentsGrid img[src$="Phelps.png"]{object-fit:contain;background:#0c0f14}
+    .student-compact-list{grid-column:1/-1;list-style:none;margin:0;padding:0;border:1px solid var(--border);border-radius:14px;overflow:hidden;background:var(--panel);box-shadow:var(--shadow)}
+    .student-compact-list li{display:flex;align-items:baseline;justify-content:space-between;gap:18px;padding:12px 14px}
+    .student-compact-list li+li{border-top:1px solid var(--border)}
+    .student-compact-name{font-weight:600}
     .card-body{padding:14px}
     .card h3{margin:0 0 6px;font-size:18px}
     .meta{color:var(--muted);font-size:12px}
@@ -130,6 +134,7 @@
 
     @media (max-width:720px){
       .hero-content{ transform: translateY(-3vh); }
+      .student-compact-list li{align-items:flex-start;flex-direction:column;gap:2px}
     }
 
     /* Motion reduction */
