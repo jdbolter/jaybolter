@@ -94,6 +94,7 @@
     #studentsGrid .card img{height:300px;aspect-ratio:auto}
     #studentsGrid img[src$="Fisher.webp"]{object-position:center 20%}
     #studentsGrid img[src$="Fiorilli.jpg"]{object-position:center top}
+    #studentsGrid img[src$="Soy.jpg"]{object-position:center top}
     #studentsGrid img[src$="Rouse.jpg"]{object-position:center 25%}
     #studentsGrid img[src$="Phelps.png"]{object-fit:contain;background:#0c0f14}
     .student-compact-list{grid-column:1/-1;list-style:none;margin:0;padding:0;border:1px solid var(--border);border-radius:14px;overflow:hidden;background:var(--panel);box-shadow:var(--shadow)}
